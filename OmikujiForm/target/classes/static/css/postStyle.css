@@ -1,0 +1,21 @@
+@charset "ISO-8859-1";
+
+
+h1 {
+	text-align: center;
+	margin: 40px 20px;
+}
+
+.post-fortune {
+	width: 300px;
+	height: 500px;
+	background-color: grey;
+	color: white;
+	margin-left: 41%;
+	margin-right: 41%;
+}
+
+p {
+	font-size: 25px;
+	padding: 10px;
+}
