@@ -37,4 +37,18 @@ public class PokeService {
 			return null;
 		}
 	}
+	
+	public PokeBook editPoke(Long id, String name, String vendor, double amount, String description) {
+		PokeBook oldPoke = this.findPoke(id);
+		oldPoke.setName(name);
+		oldPoke.setVendor(vendor);
+		oldPoke.setAmount(amount);
+		oldPoke.setDescription(description);
+		
+		return pokeRepo.save(oldPoke);
+	}
+	
+	public PokeBook editModelPoke(PokeBook poke) {
+		return pokeRepo.save(poke);
+	}
 }
