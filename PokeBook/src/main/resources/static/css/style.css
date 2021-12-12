@@ -1,0 +1,23 @@
+@charset "ISO-8859-1";
+
+h1 {
+	margin-left: 20%;
+	margin-top: 10%;
+}
+
+table {
+	margin: 50px;
+}
+
+form {
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
+body{
+	padding: 50px;
+}
+
+.error {
+	color: red;
+}
