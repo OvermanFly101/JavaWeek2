@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -42,6 +43,8 @@ public class PokeBookController {
 		}
 	}
 	
+	//***Update Existing Poke***
+	
 	@GetMapping("/poke/{id}/edit")
 	public String editOnePoke(@PathVariable("id") Long id, Model model) {
 		PokeBook poke = pokeService.findPoke(id);
@@ -57,6 +60,20 @@ public class PokeBookController {
 			pokeService.editModelPoke(poke);
 			return "redirect:/pokebook";
 		}		
+	}
+	
+	//***Show One***
+	@GetMapping("/poke/{id}")
+	public String showOnePoke(@PathVariable("id") Long id, Model model) {
+		PokeBook poke = pokeService.findPoke(id);
+		model.addAttribute("poke", poke);
+		return "showPoke.jsp";
+	}
+	
+	@DeleteMapping("/poke/{id}/delete")
+	public String processDelete(@PathVariable("id") Long id) {
+		pokeService.deletePoke(id);
+		return "redirect:/pokebook";
 	}
 	
 }

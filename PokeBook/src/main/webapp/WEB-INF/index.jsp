@@ -31,10 +31,16 @@
 		<tbody>
 			<c:forEach var="p" items="${pokes}">
 				<tr>
-					<td>${p.name}</td>
+					<td><a href="/poke/${p.id}">${p.name}</a></td>
 					<td>${p.vendor}</td>
 					<td>${p.amount}</td>
 					<td><a href="/poke/${p.id}/edit">edit</a></td>
+					<td>
+						<form action="/poke/${p.id}/delete" method="post">
+							<input type="hidden" name="_method" value="delete"/>
+							<button>Delete</button>
+						</form>
+					</td>
 				</tr>	
 			</c:forEach>
 		</tbody>
