@@ -25,6 +25,7 @@
 				<th scope="col">Expense</th>
 				<th scope="col">Vendor</th>
 				<th scope="col">Amount</th>
+				<th scope="col">Action</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -33,6 +34,7 @@
 					<td>${p.name}</td>
 					<td>${p.vendor}</td>
 					<td>${p.amount}</td>
+					<td><a href="/poke/${p.id}/edit">edit</a></td>
 				</tr>	
 			</c:forEach>
 		</tbody>

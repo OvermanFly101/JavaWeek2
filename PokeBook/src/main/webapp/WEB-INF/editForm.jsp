@@ -8,7 +8,7 @@
 <html>
 <head>
 	<meta charset="ISO-8859-1">
-	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/editStyle.css">
 	<script type="text/javascript" src="/js/app.js"></script>
 	<!-- for Bootstrap CSS -->
 	<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
@@ -18,7 +18,10 @@
 	<title>PokeBook</title>
 </head>
 <body>
-	<h1>Update Expense:</h1>
+	<div class="flex">
+		<h1>Update Expense:</h1>
+		<a href="/pokebook">Go back</a>
+	</div>
 	<form:form action="/poke/${poke.id}/edit" method="POST" modelAttribute="poke">
 		<input type="hidden" name="_method" value="put"/>
 
