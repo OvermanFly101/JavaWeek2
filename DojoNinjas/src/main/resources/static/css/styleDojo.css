@@ -1,0 +1,13 @@
+@charset "ISO-8859-1";
+
+body {
+	padding: 70px;
+}
+
+div {
+	margin: 15% 30%;
+}
+
+input {
+	margin-bottom: 15px;
+}
